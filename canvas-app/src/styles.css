@@ -1,3 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-
-
+.no-margin{
+  margin: 0px 0px 0px 0px!important;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}

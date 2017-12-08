@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { BusinessCanvasModelComponent } from './canvas/business-canvas-model/business-canvas-model.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterCardsBagPipe } from './utils/filter-cards-bag.pipe';
+import { FooterComponent } from './footer/footer.component';
+import { BagCanvasComponent } from './canvas/components/bag-canvas/bag-canvas.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { FilterCardsBagPipe } from './utils/filter-cards-bag.pipe';
     HeaderComponent,
     BusinessCanvasModelComponent,
     FilterCardsBagPipe,
+    FooterComponent,
+    BagCanvasComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,36 @@
 .col {
   position:relative;
+  min-height:300px;
+}
+.title-frame{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .parent{
   position:absolute;
-  top:64px;
+  top:0px;
   bottom:0px;
   left:0px;
   right:0px;
-  background-color:whitesmoke;
-  display: flex;
+  /*background-color:whitesmoke;*/
+
   flex-direction: row;
+}
+
+.bag{
+  overflow-y: scroll;
+  /*position: absolute;*/
+  height: 80%;
+  background-color: #eeeeee!important;
+}
+
+.frame{
+  margin: 5px 5px 5px 5px !important;
+  background-color: #e2e2e2;
+  border-radius: 15px 15px 15px 15px;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border: 0px solid #000000;
+  /*position: absolute;*/
 }

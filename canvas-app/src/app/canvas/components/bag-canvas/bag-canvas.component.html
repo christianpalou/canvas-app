@@ -1,0 +1,6 @@
+<div class="frame">
+  <h5 class="title-frame">Clientes</h5>
+  <div [dragula]='"first-bag"' class="bag col s10 offset-s1">
+    <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
+  </div>
+</div>
