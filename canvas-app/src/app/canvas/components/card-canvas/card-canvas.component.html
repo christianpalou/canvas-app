@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card ">
+      <div class="card-content">
+        <div class="row">
+          <div class="col s12" [hidden]="editMode"  (click)="editText()">
+            <p>{{data.text}}</p>
+          </div>
+          <!--<div class="col s12" [hidden]="editMode">-->
+            <!--<i class="material-icons tiny" (click)="editText()">mode edit</i>-->
+          <!--</div>-->
+
+          <div class="col s12" [hidden]="!editMode">
+            <form [formGroup]="myForm" (ngSubmit)="onSave()">
+              <div class="form-group">
+                <input formControlName="text" type="text" id="text" class="form-control">
+              </div>
+              <!--<div class="col s12 center">-->
+                <!--<button type="submit" [disabled]="!myForm.valid"-->
+                        <!--class="btn btn-primary">save-->
+                <!--</button>-->
+              <!--</div>-->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

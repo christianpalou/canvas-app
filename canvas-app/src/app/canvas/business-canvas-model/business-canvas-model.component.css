@@ -1,0 +1,14 @@
+.col {
+  position:relative;
+}
+
+.parent{
+  position:absolute;
+  top:64px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background-color:whitesmoke;
+  display: flex;
+  flex-direction: row;
+}
