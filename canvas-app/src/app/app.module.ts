@@ -10,7 +10,31 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterCardsBagPipe } from './utils/filter-cards-bag.pipe';
 import { FooterComponent } from './footer/footer.component';
 import { BagCanvasComponent } from './canvas/components/bag-canvas/bag-canvas.component';
+import { AngularFireModule} from 'angularfire2';
+import {GoogleAuthServiceService} from "./services/google-auth-service.service";
+import {AngularFireAuth} from "angularfire2/auth";
+import {AngularFireDatabase} from "angularfire2/database";
+import {Routes, RouterModule} from "@angular/router";
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyB2-o9cJazbXpuAuj73e-yX0GyjwrsgHcc",
+  authDomain: "canvas-app-c0df2.firebaseapp.com",
+  databaseURL: "https://canvas-app-c0df2.firebaseio.com",
+  projectId: "canvas-app-c0df2",
+  storageBucket: "canvas-app-c0df2.appspot.com",
+  messagingSenderId: "878726484395"
+};
+
+const appRoutes: Routes = [
+  { path: 'canvas/bcm',      component: BusinessCanvasModelComponent },
+  { path: 'home',      component: HomePageComponent },
+  { path: '', component: LandingPageComponent },
+  { path: '**', component: NotFoundPageComponent }
+];
 
 @NgModule({
   declarations: [
@@ -21,15 +45,23 @@ import { BagCanvasComponent } from './canvas/components/bag-canvas/bag-canvas.co
     FilterCardsBagPipe,
     FooterComponent,
     BagCanvasComponent,
+    HomePageComponent,
+    LandingPageComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
     DragulaModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
-  providers: [],
+  providers: [GoogleAuthServiceService, AngularFireAuth,AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

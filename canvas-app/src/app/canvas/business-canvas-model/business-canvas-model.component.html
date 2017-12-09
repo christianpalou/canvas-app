@@ -1,7 +1,18 @@
+<div style="height: calc(100vh - 64px);">
 <div class="row parent">
-  <div class="col s3">
+  <div class="col s12">
     <div class="frame">
       <h5 class="title-frame">Clientes</h5>
+      <div [dragula]='"first-bag"' class="bag col s10 offset-s1">
+        <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s12">
+    <div class="frame">
+      <h5 class="title-frame">Clientes</h5>
+      <a class="btn-large waves-effect waves-light red" (click)="newCard()"><i class="material-icons">add</i></a>
       <div [dragula]='"first-bag"' class="bag col s10 offset-s1">
         <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
       </div>
@@ -17,6 +28,8 @@
     </div>
   </div>
 
+
+
   <div class="col s3">
     <div class="frame">
       <h5 class="title-frame">Clientes</h5>
@@ -26,24 +39,11 @@
     </div>
   </div>
 
-  <div class="col s3">
-    <div class="frame">
-      <h5 class="title-frame">Clientes</h5>
-      <div [dragula]='"first-bag"' class="bag col s10 offset-s1">
-        <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
-      </div>
-    </div>
-  </div>
-
-
-
-
+</div>
 
 </div>
 
 
-
-<!--<a class="btn-floating btn-large waves-effect waves-light red" (click)="newCard()"><i class="material-icons">add</i></a>-->
 
 
 
