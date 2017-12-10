@@ -9,7 +9,9 @@ import {AngularFireAuth} from "angularfire2/auth";
 })
 export class HeaderComponent implements OnInit {
 
+  authenticated :boolean=false;
   userName:String="hola";
+  srcPhoto:String="";
 
   constructor(private auth: GoogleAuthServiceService, public afAuth: AngularFireAuth) {
     this.afAuth.authState.subscribe((auth) => {});
@@ -19,8 +21,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.auth.currentUserObservable.subscribe(observer => {
       if (observer!= null){
+        this.authenticated=true;
         this.userName= observer.displayName;
+        this.srcPhoto=observer.photoURL
       }else{
+        this.authenticated=false;
         this.userName="";
       }
     });

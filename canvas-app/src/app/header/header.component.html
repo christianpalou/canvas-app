@@ -5,13 +5,20 @@
     <ul class="right hide-on-med-and-down">
       <li><a class="dropdown-button black-text" href="#!" data-activates="dropdown1"><i class="material-icons right">more_vert</i></a></li>
     </ul>
-    <a class="right black-text">{{userName}}</a>
+
+    <div *ngIf="userName">
+      <div class="right" style="height: 64px;">
+        <img class="circle userImage" [src]='srcPhoto' alt="">
+      </div>
+      <a class="right black-text">{{userName}}  </a>
+    </div>
+
   </div>
 </nav>
 
 <ul id="dropdown1" class="dropdown-content">
-  <li><a (click)="login()">Log in</a></li>
-  <li><a (click)="logout()">Log out</a></li>
+  <li *ngIf="!userName" ><a (click)="login()">Log in</a></li>
+  <li *ngIf="userName"> <a (click)="logout()">Log out</a></li>
 </ul>
 
 
