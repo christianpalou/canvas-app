@@ -4,7 +4,7 @@ import {CardData} from "../components/card-canvas/cardData";
 @Component({
   selector: 'app-business-canvas-model',
   templateUrl: './business-canvas-model.component.html',
-  styleUrls: ['./business-canvas-model.component.css']
+  styleUrls: ['./business-canvas-model.component.scss']
 })
 export class BusinessCanvasModelComponent implements OnInit {
 

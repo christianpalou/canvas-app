@@ -8,43 +8,42 @@
           "space1 space3 space4 space6 space7"
           "space8 space8 space8 space8 space8";
 }
-
-.space1{
-  grid-area: space1;
-  border: 2px solid #000000;
+.space{
+  //border-bottom: 0.5px solid #000000;
+  //border-right: 0.5px solid #000000;
   position: relative;
+  overflow-y: scroll;
+  border:1px solid #000000;
+}
+.space1{
+  @extend .space;
+  grid-area: space1;
 }
 
 .space2{
+  @extend .space;
   grid-area: space2;
-  border: 2px solid #000000;
-  position: relative;
 }
 .space3{
+  @extend .space;
   grid-area: space3;
-  border: 2px solid #000000;
-  position: relative;
 }
 .space4{
+  @extend .space;
   grid-area: space4;
-  border: 2px solid #000000;
-  position: relative;
 }
 .space5{
+  @extend .space;
   grid-area: space5;
-  border: 2px solid #000000;
-  position: relative;
 }
 .space6{
+  @extend .space;
   grid-area: space6;
-  border: 2px solid #000000;
-  position: relative;
 }
 
 .space7{
+  @extend .space;
   grid-area: space7;
-  border: 2px solid #000000;
-  position: relative;
 }
 
 .space8{
@@ -57,15 +56,13 @@
 }
 
 .space9{
+  @extend .space;
   grid-area: space9;
-  border: 2px solid #000000;
-  position: relative;
 }
 
 .space10{
+  @extend .space;
   grid-area: space10;
-  border: 2px solid #000000;
-  position: relative;
 }
 
 .bag{

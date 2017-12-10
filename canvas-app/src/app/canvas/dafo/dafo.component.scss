@@ -7,31 +7,37 @@
     "space1 space2"
     "space3 space4";
 }
-
+.space{
+  border-bottom: 0.5px solid #000000;
+  border-right: 0.5px solid #000000;
+  position: relative;
+  overflow-y: scroll;
+}
 .space1{
+    @extend .space;
     grid-area: space1;
-    border: 2px solid #000000;
-    position: relative;
 }
 
 .space2{
+    @extend .space;
     grid-area: space2;
-    border: 2px solid #000000;
-    position: relative;
 }
 .space3{
+    @extend .space;
     grid-area: space3;
-    border: 2px solid #000000;
-    position: relative;
 }
 .space4{
+    @extend .space;
     grid-area: space4;
-    border: 2px solid #000000;
-    position: relative;
 }
 
 .bag{
     position: absolute;
     height: 100%;
     width: 100%;
+}
+
+
+.cursor{
+  cursor: pointer;
 }

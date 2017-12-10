@@ -5,7 +5,7 @@ import {FormGroup, FormBuilder} from "@angular/forms";
 @Component({
   selector: 'app-card-canvas',
   templateUrl: './card-canvas.component.html',
-  styleUrls: ['./card-canvas.component.css']
+  styleUrls: ['./card-canvas.component.scss']
 })
 export class CardCanvasComponent implements OnInit {
 
