@@ -1,7 +1,29 @@
-body {
-  background: url(../../../assets/img/patrick-perkins-350622.jpg)  no-repeat center center fixed;
+.img-background {
+  height:calc(100vh - 64px);
+  background: url(../../../assets/img/background-desenfoque.jpg)  no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.promo-example {
+  overflow: hidden;
+}
+
+.promo {
+  width: 100%;
+}
+.promo-caption {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.promo i {
+  margin: 40px 0;
+  color: #ee6e73;
+  font-size: 7rem;
+  display: block;
 }

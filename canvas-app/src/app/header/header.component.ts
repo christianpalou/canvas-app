@@ -10,7 +10,7 @@ import {AngularFireAuth} from "angularfire2/auth";
 export class HeaderComponent implements OnInit {
 
   authenticated :boolean=false;
-  userName:String="hola";
+  userName:String="";
   srcPhoto:String="";
 
   constructor(private auth: GoogleAuthServiceService, public afAuth: AngularFireAuth) {
