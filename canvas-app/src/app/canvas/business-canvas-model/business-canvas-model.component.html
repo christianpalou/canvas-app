@@ -1,50 +1,73 @@
-<div style="height: calc(100vh - 64px);">
-<div class="row parent">
-  <div class="col s12">
-    <div class="frame">
-      <h5 class="title-frame">Clientes</h5>
-      <div [dragula]='"first-bag"' class="bag col s10 offset-s1">
-        <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
-      </div>
+<span class="grid">
+
+  <div class="space1">
+   <h5>Key Partners</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
     </div>
   </div>
 
-  <div class="col s12">
-    <div class="frame">
-      <h5 class="title-frame">Clientes</h5>
-      <a class="btn-large waves-effect waves-light red" (click)="newCard()"><i class="material-icons">add</i></a>
-      <div [dragula]='"first-bag"' class="bag col s10 offset-s1">
-        <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
-      </div>
+  <div class="space2">
+    <h5>Key Activities</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:2)" [data]="data" ></app-card-canvas>
     </div>
   </div>
 
-  <div class="col s3">
-    <div class="frame">
-      <h5 class="title-frame">Clientes</h5>
-      <div [dragula]='"first-bag"' class="bag col s10 offset-s1">
-        <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
-      </div>
+  <div class="space3">
+      <h5>Key resources</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:3)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
+
+  <div class="space4">
+  <h5>Value Propositions</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:4)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
+
+   <div class="space5">
+    <h5>Customer Relationships</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:5)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
+
+  <div class="space6">
+   <h5>Channels</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:6)" [data]="data" ></app-card-canvas>
     </div>
   </div>
 
 
-
-  <div class="col s3">
-    <div class="frame">
-      <h5 class="title-frame">Clientes</h5>
-      <div [dragula]='"first-bag"' class="bag col s10 offset-s1">
-        <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
-      </div>
+  <div class="space7">
+    <h5>Customer Segments</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:7)" [data]="data" ></app-card-canvas>
     </div>
   </div>
 
-</div>
+    <div class="space8">
+     <div class="space9">
+    <h5>Cost Structure</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:8)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
 
-</div>
+        <div class="space10">
+   <h5>Revenue Streams</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:9)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
+
+  </div>
 
 
 
 
-
-
+</span>

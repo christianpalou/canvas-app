@@ -18,6 +18,7 @@ import {Routes, RouterModule} from "@angular/router";
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { DafoComponent } from './canvas/dafo/dafo.component';
 
 
 export const firebaseConfig = {
@@ -30,6 +31,7 @@ export const firebaseConfig = {
 };
 
 const appRoutes: Routes = [
+  { path: 'canvas/dafo',      component: DafoComponent },
   { path: 'canvas/bcm',      component: BusinessCanvasModelComponent },
   { path: 'home',      component: HomePageComponent },
   { path: '', component: LandingPageComponent },
@@ -47,7 +49,8 @@ const appRoutes: Routes = [
     BagCanvasComponent,
     HomePageComponent,
     LandingPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    DafoComponent
   ],
   imports: [
     BrowserModule,

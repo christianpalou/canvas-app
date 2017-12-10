@@ -1,0 +1,26 @@
+<span class="grid">
+  <div class="space1">
+    <h5>Fortalezas</h5>
+    <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:1)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
+  <div class="space2">
+    <h5>Debilidades</h5>
+     <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:2)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
+  <div class="space3">
+    <h5>Oportunidades</h5>
+     <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:3)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
+  <div class="space4">
+    <h5>Amenazas</h5>
+     <div [dragula]='"first-bag"' class="bag">
+          <app-card-canvas  *ngFor="let data of (listData | filterCardsBag:4)" [data]="data" ></app-card-canvas>
+    </div>
+  </div>
+</span>
